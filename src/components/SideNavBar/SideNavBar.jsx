@@ -1,12 +1,24 @@
+import { useContext } from 'react';
+import { menuContext } from '../../Context/Context';
 import { menu } from '../../assets';
 import { sideNavLinks } from '../../utils';
 import { NavLink } from 'react-router-dom';
 const SideNavBar = () => {
+  const [activeMenu, setActiveMenu] = useContext(menuContext);
   return (
     <div className="w-[100%] h-screen bg-darkblue text-white flex flex-col justify-start items-center p-4 border-r-2 border-slate-800 shadow-bs">
       <div className="w-full flex justify-between items-center ">
-        <h1 className="font-bold">Ecommerce Dashboard</h1>
-        <img src={menu} alt="menu" className="w-8 h-8 cursor-pointer" />
+        <h1 className={`${activeMenu ? 'hidden' : 'block'} font-bold`}>
+          Ecommerce Dashboard
+        </h1>
+        <img
+          src={menu}
+          alt="menu"
+          className="w-8 h-8 cursor-pointer"
+          onClick={() => {
+            setActiveMenu(!activeMenu);
+          }}
+        />
       </div>
       <nav className="w-full mt-10 flex flex-col justify-start items-start">
         {sideNavLinks.map((navLink) => {
@@ -17,7 +29,9 @@ const SideNavBar = () => {
               className="flex justify-start items-center py-3 text-white"
             >
               <img src={navLink.img} alt={navLink.id} className="w-6 h-6" />
-              <span className="pl-6">{navLink.title}</span>
+              <span className={`pl-6 ${activeMenu ? 'hidden' : 'block'}`}>
+                {navLink.title}
+              </span>
             </NavLink>
           );
         })}

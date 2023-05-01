@@ -7,8 +7,10 @@ export default {
         darkblue: '#000220',
       },
       flexBasis: {
-        20: '18%',
+        18: '18%',
         80: '82%',
+        10: '5%',
+        90: '95%',
       },
       fontFamily: {
         playFairDisplay: ['Playfair Display', 'serif'],
