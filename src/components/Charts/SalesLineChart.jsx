@@ -25,11 +25,11 @@ const SalesLineChart = ({ salesData }) => {
         }}
       >
         <CartesianGrid strokeDasharray="3 3" stroke="#5f5f5f" />
-        <XAxis dataKey="name" />
-        <YAxis />
+        <XAxis dataKey="name" stroke="#000" />
+        <YAxis stroke="#000" />
         <Tooltip />
         <Legend />
-        <Area type="monotone" dataKey="sales" stroke="#8f8f8f" fill="#add8e6" />
+        <Area type="monotone" dataKey="sales" stroke="#008f8f" fill="#60bffd" />
       </AreaChart>
     </ResponsiveContainer>
   );

@@ -1,6 +1,7 @@
 import { revenu, orders, montlyprofit, productcart } from '../../assets';
 import SalesLineChart from '../../components/Charts/SalesLineChart';
-import { salesData } from '../../utils';
+import NewUsersBarChart from '../../components/Charts/NewUsersBarChart';
+import { salesData, newUsersData } from '../../utils';
 const Dashboard = () => {
   return (
     <div className="w-full p-6 grid grid-cols-4 gap-4">
@@ -51,8 +52,12 @@ const Dashboard = () => {
         </div>
       </div>
       <div className="w-full h-96 col-span-2 bg-gray-300 flex flex-col rounded-md">
-        <h1 className="font-bold text-xl p-4">Sales Chart</h1>
+        <h1 className="font-bold text-xl p-4">Sale Statistics</h1>
         <SalesLineChart salesData={salesData} />
+      </div>
+      <div className="w-full h-96 col-span-2 bg-gray-300 flex flex-col rounded-md">
+        <h1 className="font-bold text-xl p-4">New Users</h1>
+        <NewUsersBarChart newUsersData={newUsersData} />
       </div>
     </div>
   );

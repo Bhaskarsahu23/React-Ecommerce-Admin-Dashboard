@@ -87,3 +87,12 @@ export const salesData = [
     sales: 380,
   },
 ];
+
+export const newUsersData = [
+  { name: 'January', newUsers: 15 },
+  { name: 'Fabuary', newUsers: 25 },
+  { name: 'March', newUsers: 20 },
+  { name: 'April', newUsers: 50 },
+  { name: 'May', newUsers: 65 },
+  { name: 'June', newUsers: 29 },
+];
