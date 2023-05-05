@@ -1,10 +1,9 @@
-import { useContext } from 'react';
-import { menuContext } from '../../Context/Context';
 import { menu } from '../../assets';
 import { sideNavLinks } from '../../utils';
 import { NavLink } from 'react-router-dom';
+import { useStateContext } from '../../Context/ContextProvider';
 const SideNavBar = () => {
-  const [activeMenu, setActiveMenu] = useContext(menuContext);
+  const { activeMenu, setActiveMenu } = useStateContext();
   return (
     <div className="w-[100%] h-screen bg-darkblue text-white flex flex-col justify-start items-center p-4 border-r-2 border-slate-800 shadow-bs">
       <div className="w-full flex justify-between items-center ">
@@ -15,9 +14,7 @@ const SideNavBar = () => {
           src={menu}
           alt="menu"
           className="w-8 h-8 cursor-pointer"
-          onClick={() => {
-            setActiveMenu(!activeMenu);
-          }}
+          onClick={() => setActiveMenu(!activeMenu)}
         />
       </div>
       <nav className="w-full mt-10 flex flex-col justify-start items-start">

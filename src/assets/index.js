@@ -10,6 +10,10 @@ import transitions from './transitions.svg';
 import users from './users.svg';
 import review from './review.svg';
 import profile from './profile.jpg';
+import revenu from './revenu.png';
+import orders from './orders.png';
+import montlyprofit from './monthlyprofit.png';
+import productcart from './productcart.png';
 
 export {
   menu,
@@ -24,4 +28,8 @@ export {
   users,
   review,
   profile,
+  revenu,
+  orders,
+  montlyprofit,
+  productcart,
 };
